@@ -19,8 +19,8 @@ export class TripsController {
   addTrip() {
     window.event.preventDefault();
     console.log("add trip");
-    let form = window.event.target;
-    let tripData = {
+    const form = window.event.target;
+    const tripData = {
       title: form.title.value,
     };
     console.log('trip data',tripData);

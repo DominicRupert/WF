@@ -10,6 +10,7 @@ class AppState extends EventEmitter {
   trips = [
     new Trip({
       title: "Trip to Hawaii",
+      
     }),
   ];
   /** @type {import('./Models/Reservation').Reservation[]} */

@@ -14,11 +14,16 @@ export class Reservation {
 
   get Template() {
     return /*html*/ `
-         <div class="col border py-4 border-1">${this.type}</div>
-         <div class="col border py-4 border-1">${this.name}</div>
-         <div class="col border py-4 border-1">${this.conNum}</div>
-         <div class="col border py-4 border-1">${this.date}</div>
-         <div class="col border py-4 border-1">${this.price}</div>
+    <div>
+    <tr>
+     <th scope="row">${this.type}</th>
+     <td>${this.date}</td>
+     <td>${this.name}</td>
+     <td>${this.address}</td>
+            </tr>
+            </div>
+  
+    
          `;
   }
 }

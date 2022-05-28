@@ -1,174 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
 
-    <link
-      rel="stylesheet"
-      href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
-    />
-    <link rel="stylesheet" href="assets/style/main.css" />
-    <link rel="stylesheet" href="assets/style/bootstrap.min (1).css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <!-- NOTE: TRIP BIG, RESERVATION SMALL-->
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/style/main.css" />
+  <link rel="stylesheet" href="assets/style/bootstrap.min (1).css" />
 
-  <body class="bg-dark">
-    <header>
-      <nav class="navbar bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="https://thiscatdoesnotexist.com/"
-              alt=""
-              width="60em"
-              class="d-inline-block align-text-top"
-            />
-            Bootstrap
-          </a>
-        </div>
-      </nav>
-    </header>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- NOTE: TRIP BIG, RESERVATION SMALL-->
 
-    <main class="container-fluid">
+<body class="bg-dark">
+  <header>
+    <nav class="navbar bg-light">
       <div class="container-fluid">
-        <div class="row flex-row" >
+        <a class="navbar-brand" href="#">
+          <img src="https://thiscatdoesnotexist.com/" alt="" width="60em" class="d-inline-block align-text-top" />
+          Bootstrap
+        </a>
+        <div class="row justify-content-center">
 
-          <nav>
-            <div class="nav nav-tabs" id="trips" role="tablist">
-          </nav>
-    
-      
-      <ul class="nav nav-tabs py-1 px-0"   >
-        <li class="nav-item role="presentation">
-          <button
-          class="nav-link active"
-          onclick=""
-          data-bs-toggle="modal"
-          data-bs-target="#newtrip"
-          aria-current="page"
-            ><span class="mdi mdi-plus"></span
-          >
-        </li>
-        <form onsubmit="app.tripsController.addTrip()">
+          <button active class="btn btn-primary" onclick="" data-bs-toggle="modal" data-bs-target="#newtrip" aria-current="page">
+            <span class="mdi mdi-plus"></span>Create Trip</button>
+          </div>
+      </div>
+    </nav>
+  </header>
 
-          <div class="modal fade" id="newtrip" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">New Trip entry</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Trip Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="What do you want your trip to be called?" required>
+  <main class="container-fluid">
+    <div class="container-fluid">
+      <div class="row flex-row" id="trips">
+        <ul class="list-group list-group-horizontal">
+
+        </ul>
+
+        <!-- <ul class="list-group list-group-horizontal" >
+          
+          
+          <form onsubmit="app.tripsController.addTrip()">
+
+            <div class="modal fade" id="newtrip" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Trip entry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit"  data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Trip Name</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" name="title"
+                      placeholder="What do you want your trip to be called?" required>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </form>
-      
-      </ul>
-    </div>
-    </div>
-      <div class="row row-cols-auto tab-content bg-dark text-white" id="reservations">
-       
-      </div>
-    </main>
+          </form>
+        </ul> -->
 
-    <footer>
-      <div class="container-fluid">
-        <div class="row g-3 pb-3 input-field">
-          <div class="col-sm-3">
-            <div class="input-group mb-3">
-              <button
-                class="btn btn-outline-secondary dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
-              </ul>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="City"
-                aria-label="City"
-              />
-            </div>
+
+
+
+      </div>
+
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <table class="table text-white">
+          <thead>
+            <tr>
+              <th scope="col">type</th>
+              <th scope="col">date</th>
+              <th scope="col">name</th>
+              <th scope="col">address</th>
+              <th scope="col">confirmation number</th>
+              <th scope="col">price</th>
+            </tr>
+          </thead>
+          <tbody id="reservations">
+            
+          
+          </tbody>
+        </table> -->
+
+      </div>
+    </div>
+
+    </div>
+    </div>
+  </main>
+ 
+
+  <footer>
+    <!-- <div class="container-fluid">
+      <div class="row g-3 pb-3 input-field">
+        <div class="col-sm-3">
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+            <input type="text" class="form-control" placeholder="City" aria-label="City" />
           </div>
-          <div class="col-sm">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="State"
-              aria-label="State"
-            />
-          </div>
-          <div class="col-sm">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Zip"
-              aria-label="Zip"
-            />
-          </div>
-          <div class="row">
-            <div class="col d-flex">
-              <textarea
-                placeholder="Trip notes here..."
-                name=""
-                id=""
-                cols="60"
-                rows="5"
-              ></textarea>
-            </div>
+        </div>
+        <div class="col-sm">
+          <input type="text" class="form-control" placeholder="State" aria-label="State" />
+        </div>
+        <div class="col-sm">
+          <input type="text" class="form-control" placeholder="Zip" aria-label="Zip" />
+        </div>
+        <div class="row">
+          <div class="col d-flex">
+            <textarea placeholder="Trip notes here..." name="" id="" cols="60" rows="5"></textarea>
           </div>
         </div>
       </div>
-    </footer>
+    </div> -->
+  </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
-      integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc="
-      crossorigin="anonymous"
-    ></script>
-    <script src="app/main.js" type="module"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
 </html>

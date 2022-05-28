@@ -7,6 +7,13 @@ class TripsService {
        console.log('trip service up', tripData);
        ProxyState.trips = [...ProxyState.trips, new Trip(tripData)]
     }
+    updateTrip(tripNote, id) {
+        let trip = ProxyState.trips.find(t => t.id === id);
+        console.log('updateTrip',tripNote, id);
+        trip.note = tripNote;
+        ProxyState.trips = ProxyState.trips
+
+    }
     deleteTrip(id) {
         console.log('deleting', id);
         ProxyState.trips = ProxyState.trips.filter(t => t.id !== id);
