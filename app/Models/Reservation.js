@@ -14,7 +14,8 @@ export class Reservation {
 
   get Template() {
     return /*html*/ `
-    <tr class="text-bg-danger">
+    
+    <tr>
      <th scope="row">${this.type}</th>
      <td class="text-bg-danger">${this.date}</td>
      <td class="text-bg-danger">${this.name}</td>

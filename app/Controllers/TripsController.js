@@ -22,9 +22,21 @@ export class TripsController {
     const form = window.event.target;
     const tripData = {
       title: form.title.value,
+    
+      // type: form.type.value,
+      // name: form.name.value,
+      // date: form.date.value,
+      // address: form.address.value,
+      // conNum: form.conNum.value,
+      // price: form.price.value,
     };
     console.log('trip data',tripData);
     tripsService.addTrip(tripData);
+  }
+
+  updateTripNote(id){
+    let textarea = window.event.target
+    tripsService.updateTripNote(textarea.value, id)
   }
 
 

@@ -25,17 +25,42 @@
         </a>
         <div class="row justify-content-center">
 
-          <button active class="btn btn-primary" onclick="" data-bs-toggle="modal" data-bs-target="#newtrip" aria-current="page">
+          <button active class="btn btn-primary" onclick="" data-bs-toggle="modal" data-bs-target="#newtrip"
+            aria-current="page">
             <span class="mdi mdi-plus"></span>Create Trip</button>
-          </div>
+          <form onsubmit="app.tripsController.addTrip()">
+
+            <div class="modal fade" id="newtrip" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Trip entry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Trip Name</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" name="title"
+                        placeholder="What do you want your trip to be called?" required>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </nav>
   </header>
 
   <main class="">
- 
-      <div class="container-fluid" id="trips">
-       
+
+    <div class="container-fluid">
+      <div class="row" id="trips">
 
         <!-- <ul class="list-group list-group-horizontal" >
           
@@ -66,13 +91,9 @@
           </form>
         </ul> -->
 
-
-
-
       </div>
 
 
-    
 
 
 
@@ -84,7 +105,13 @@
 
 
 
-        <!-- <table class="table text-white">
+
+
+
+
+
+
+      <!-- <table class="table text-white">
           <thead>
             <tr>
               <th scope="col">type</th>
@@ -101,47 +128,15 @@
           </tbody>
         </table> -->
 
-     
+
 
   </main>
- 
+
 
   <footer>
-    <!-- <div class="container-fluid">
-      <div class="row g-3 pb-3 input-field">
-        <div class="col-sm-3">
-          <div class="input-group mb-3">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
-            <input type="text" class="form-control" placeholder="City" aria-label="City" />
-          </div>
-        </div>
-        <div class="col-sm">
-          <input type="text" class="form-control" placeholder="State" aria-label="State" />
-        </div>
-        <div class="col-sm">
-          <input type="text" class="form-control" placeholder="Zip" aria-label="Zip" />
-        </div>
-        <div class="row">
-          <div class="col d-flex">
-            <textarea placeholder="Trip notes here..." name="" id="" cols="60" rows="5"></textarea>
-          </div>
-        </div>
-      </div>
-    </div> -->
+   
+    
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"

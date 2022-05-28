@@ -10,6 +10,7 @@ class AppState extends EventEmitter {
   trips = [
     new Trip({
       title: "Trip to Hawaii",
+      note: "Trip to Hawaii",
       
     }),
   ];
@@ -17,8 +18,8 @@ class AppState extends EventEmitter {
   reservations = [
     new Reservation({
       type: "Hotel",
-      name: "marriott",
       date: "12/12/12",
+      name: "marriott",
       address: "123 fake st",
       conNum: "123-456-7890",
       price: "$100",

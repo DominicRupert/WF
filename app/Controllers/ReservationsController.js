@@ -8,7 +8,7 @@ export class ReservationsController {
 
   addReservation(tripId) {
     window.event.preventDefault();
-    console.log("adding res", tripId);
+   
     let form = window.event.target;
 
     let reservationData = {
