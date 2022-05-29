@@ -17,18 +17,23 @@
 
 <body class="bg-dark">
   <header>
-    <nav class="navbar bg-light">
+  </header>
+  <main class="">
+    <nav class="navbar bg-primary p-0">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="https://thiscatdoesnotexist.com/" alt="" width="60em" class="d-inline-block align-text-top" />
-          Bootstrap
         </a>
+        <h1 class="text-center text-white display-6">
+          WAYFINDER
+
+        </h1>
         <div class="row justify-content-center">
 
-          <button active class="btn btn-primary" onclick="" data-bs-toggle="modal" data-bs-target="#newtrip"
-            aria-current="page">
+          <button active class="btn btn-primary border border-1" onclick="" data-bs-toggle="modal"
+            data-bs-target="#newtrip" aria-current="page">
             <span class="mdi mdi-plus"></span>Create Trip</button>
-          <form onsubmit="app.tripsController.addTrip()">
+          <form class="row" id="form" onsubmit="app.tripsController.addTrip('${this.id}')">
 
             <div class="modal fade" id="newtrip" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -44,9 +49,13 @@
                         placeholder="What do you want your trip to be called?" required>
                     </div>
                   </div>
+                  <div class="modal-body">
+                    <label for="date" class="form-label">date</label>
+                    <input type="date" class="form-control" required id="date">
+                  </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                   </div>
                 </div>
               </div>
@@ -55,13 +64,15 @@
         </div>
       </div>
     </nav>
-  </header>
+ 
+    
 
-  <main class="">
 
-    <div class="container-fluid">
-      <div class="row" id="trips">
 
+
+    <div class="container-fluid py-4">
+      <div class="row   " id="trips">
+       
         <!-- <ul class="list-group list-group-horizontal" >
           
           
@@ -92,6 +103,7 @@
         </ul> -->
 
       </div>
+    </div>
 
 
 
@@ -111,7 +123,7 @@
 
 
 
-      <!-- <table class="table text-white">
+    <!-- <table class="table text-white">
           <thead>
             <tr>
               <th scope="col">type</th>
@@ -134,8 +146,8 @@
 
 
   <footer>
-   
-    
+
+
 
   </footer>
 

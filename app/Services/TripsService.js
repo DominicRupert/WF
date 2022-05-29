@@ -3,7 +3,7 @@ import { Trip } from "../Models/Trip.js";
 
 
 class TripsService {
-    addTrip(tripData) {
+   async addTrip(tripData) {
        console.log('trip service up', tripData);
        ProxyState.trips = [...ProxyState.trips, new Trip(tripData)]
     }

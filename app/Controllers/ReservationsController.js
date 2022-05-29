@@ -1,5 +1,11 @@
 import { ProxyState } from "../AppState.js";
 import { reservationsService } from "../Services/ReservationsService.js";
+import { generateId } from "../Utils/generateId.js";
+import {Pop} from "../Utils/Pop.js";
+
+
+
+
 
 export class ReservationsController {
   constructor() {
@@ -8,7 +14,7 @@ export class ReservationsController {
 
   addReservation(tripId) {
     window.event.preventDefault();
-   
+    console.log("adding", tripId);
     let form = window.event.target;
 
     let reservationData = {
@@ -24,7 +30,9 @@ export class ReservationsController {
     reservationsService.addReservation(reservationData);
   }
 
-  deleteReservation(id) {
+  async deleteReservation(id) {
+    if(await Pop.confirm("Are you sure you want to delete this reservation?")){
     reservationsService.deleteReservation(id);
   }
+}
 }
