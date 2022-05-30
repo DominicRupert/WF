@@ -35,14 +35,14 @@ export class Trip {
             </table>
 
 
-            <button active  data-bs-toggle="modal"  data-bs-target="#reservation${
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"  data-bs-target="#reservation${
               this.id
             }" id="" class="btn btn-primary p-3 ">Add Reservation</button>
           
             <form class="row"  id="form" onsubmit="app.reservationsController.addReservation('${
               this.id
             }')">
-            <div class="modal fade" id="reservation${this.id}">
+            <div class="modal fade" id="reservation${this.id}" aria-hidden="true" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -108,7 +108,8 @@ export class Trip {
   get Reservations() {
     let reservations =
    
-      ProxyState.reservations.filter((r) => r.tripId == this.id).sort((a,z)=> a.date - z.date);
+      ProxyState.reservations.filter((r) => r.tripId == this.id)
+      ProxyState.reservations.sort((a,z)=> a.date - z.date);
 
     // console.log('reservations', this.Reservations)
     let template = "";

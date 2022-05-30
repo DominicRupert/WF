@@ -6,28 +6,22 @@ import { Pop} from "../Utils/Pop.js";
 
 
 function _drawTrips() {
-  let trips = ProxyState.trips.sort((a,z)=> a.date - z.date);
-  
+  let trips = ProxyState.trips.sort ((a,z)=> a.date - z.date);
   
   let template = "";
   trips.forEach((t) => (template += t.Template));
   document.getElementById("trips").innerHTML = template;
 }
 
-
 export class TripsController {
   constructor() {
     console.log("controller up", ProxyState.trips);
-  
     ProxyState.on("trips", _drawTrips);
     ProxyState.on('reservations', _drawTrips)
-    
     ProxyState.on("trips", saveState);
     ProxyState.on('reservations', saveState)
-    
     loadState()
     _drawTrips();
-   
     
   }
 
