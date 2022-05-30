@@ -45,7 +45,7 @@
                   <div class="modal-body">
                     <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Trip Name</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput1" name="title"
+                      <input type="text" minlength="3" maxlength="15" class="form-control" id="exampleFormControlInput1" name="title"
                         placeholder="What do you want your trip to be called?" required>
                     </div>
                   </div>
@@ -53,6 +53,12 @@
                     <label for="date" class="form-label">date</label>
                     <input type="date" class="form-control" required id="date">
                   </div>
+                  <div class="mb-3 col-12 p-3">
+                    <label for="notes" class="form-label">Trip Notes?</label>
+                    <textarea name="notes" id="notes" class="form-control" aria-describedby="helpId"
+                      placeholder=""></textarea>
+                  </div>
+                 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Save changes</button>
@@ -64,6 +70,8 @@
         </div>
       </div>
     </nav>
+  
+       
  
     
 

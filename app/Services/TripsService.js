@@ -10,7 +10,7 @@ class TripsService {
     updateTripNote(tripNote, id) {
         let trip = ProxyState.trips.find(t => t.id === id);
         console.log('updateTrip',tripNote, trip);
-        trip.note = tripNote;
+        trip.notes = tripNote;
         ProxyState.trips = ProxyState.trips
 
     }

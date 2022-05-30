@@ -7,6 +7,7 @@ class ReservationsService {
         
         
         ProxyState.reservations = [...ProxyState.reservations, new Reservation(reservationData)]
+       ProxyState.reservations=ProxyState.reservations.sort ((a,z)=> a.date - z.date);
     }
     deleteReservation(id) {
         console.log('deleting', id);
