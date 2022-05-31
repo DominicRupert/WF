@@ -6,7 +6,7 @@ export class Reservation {
     this.tripId = data.tripId 
     this.type = data.type;
     this.name = data.name;
-    this.date = data.date;
+    (this.date = new Date( data.date));
     this.address = data.address;
     this.conNum = data.conNum;
     this.price = data.price;
@@ -17,7 +17,7 @@ export class Reservation {
     
     <tr class = "text-bg-danger p-0">
      <td scope="row">${this.type}</th>
-     <td class="">${this.date}</td>
+     <td class="">${this.date.toDateString()}</td>
      <td class="">${this.name}</td>
      <td>${this.address}</td>
      <td>${this.conNum}</td>
